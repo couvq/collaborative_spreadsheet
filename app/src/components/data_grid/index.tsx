@@ -2,9 +2,14 @@ import "handsontable/styles/handsontable.min.css";
 import "handsontable/styles/ht-theme-main.min.css";
 import Handsontable from "handsontable/base";
 import { registerAllModules } from "handsontable/registry";
+import { HyperFormula } from 'hyperformula';
 import { HotTable } from "@handsontable/react-wrapper";
 
 registerAllModules();
+const hyperformulaInstance = HyperFormula.buildEmpty({
+    // initialize it with the `'internal-use-in-handsontable'` license key
+    licenseKey: 'internal-use-in-handsontable',
+  });
 
 const DataGrid = () => {
   return (
@@ -20,6 +25,10 @@ const DataGrid = () => {
         colWidths={100}
         manualColumnResize
         licenseKey="non-commercial-and-evaluation" // for non-commercial use only
+        formulas={{
+            engine: HyperFormula,
+            // [plugin configuration]
+          }}
       />
     </div>
   );
