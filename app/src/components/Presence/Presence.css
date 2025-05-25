@@ -1,5 +1,11 @@
 .presence_overlay {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 100;
 }

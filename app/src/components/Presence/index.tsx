@@ -21,19 +21,20 @@ const Cursor = ({ x, y }) => {
   return (
     <div
       style={{
-        position: "fixed",
         top: y,
         left: x,
-        pointerEvents: "none",
-        transform: "translate(-50%, -50%)",
-        /* Add your cursor styles here */
-        backgroundColor: "white",
-        width: "20px",
-        height: "20px",
-        borderRadius: "50%",
-        zIndex: 100,
       }}
-    />
+      className="cursor"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+      >
+        <path fill="#FBFF3D" d="M4.5.79v22.42l6.56-6.57h9.29L4.5.79z"></path>
+      </svg>
+    </div>
   );
 };
 
